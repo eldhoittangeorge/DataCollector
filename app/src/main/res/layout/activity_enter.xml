@@ -10,31 +10,32 @@
 
     <EditText
         android:id="@+id/editTextLong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="139dp"
+        android:layout_height="0dp"
         android:ems="10"
         android:hint="Longitude"
         android:inputType="textPersonName"
         tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="36dp"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextLat"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/editTextLat"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextLat" />
 
     <EditText
         android:id="@+id/editTextLat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="146dp"
+        android:layout_height="47dp"
         android:ems="10"
         android:hint="Latitude"
         android:inputType="textPersonName"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="16dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="14dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLong"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextMark"
@@ -43,13 +44,17 @@
         android:ems="10"
         android:hint="Landmark"
         android:inputType="textPersonName"
-        tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/editTextLat"
-        android:layout_marginTop="22dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLat"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCap"
+        app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/editTextLat" />
+        android:layout_marginBottom="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintVertical_bias="0.94" />
 
     <EditText
         android:id="@+id/editTextCap"
@@ -58,12 +63,12 @@
         android:ems="10"
         android:hint="Capacity"
         android:inputType="textPersonName"
-        tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/editTextLoc"
         app:layout_constraintRight_toRightOf="@+id/editTextMark"
-        android:layout_marginTop="14dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextMark"
         tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="18dp"
         app:layout_constraintLeft_toLeftOf="@+id/editTextMark" />
 
     <EditText
@@ -73,12 +78,12 @@
         android:ems="10"
         android:hint="Location"
         android:inputType="textPersonName"
-        tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/editTextOwner"
         app:layout_constraintRight_toRightOf="@+id/editTextCap"
-        android:layout_marginTop="19dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCap"
         tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="20dp"
         app:layout_constraintLeft_toLeftOf="@+id/editTextCap" />
 
     <EditText
@@ -88,12 +93,12 @@
         android:ems="10"
         android:hint="Owner"
         android:inputType="textPersonName"
-        tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEnterData"
         app:layout_constraintRight_toRightOf="@+id/editTextLoc"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLoc"
         tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="17dp"
         app:layout_constraintLeft_toLeftOf="@+id/editTextLoc" />
 
     <Button
@@ -101,11 +106,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="enter"
-        tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="18dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextOwner"
         tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="65dp"
         app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/buttonLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Location"
+        app:layout_constraintBottom_toTopOf="@+id/editTextMark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81" />
 </android.support.constraint.ConstraintLayout>

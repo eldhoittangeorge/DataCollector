@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     StringBuffer buffer = new StringBuffer();
                     while(res.moveToNext()){
-                        Toast.makeText(MainActivity.this, res.getString(0), Toast.LENGTH_SHORT).show();
                         buffer.append("Longnitude :"+res.getString(0)+"\n");
                         buffer.append("Latitude :"+res.getString(1)+"\n");
                         buffer.append("Landmark :"+res.getString(2)+"\n");
